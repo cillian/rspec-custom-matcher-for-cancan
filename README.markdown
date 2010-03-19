@@ -6,13 +6,13 @@ Before
 
 If you use rspec and CanCan and you have some specs like...
 
-    ability = Ability.new(@guest)
+    ability = Ability.new(@member)
     ability.can?(create, Post).should be_true
 
     ability = Ability.new(@guest)
     ability.cannot?(:destroy, Comment).should be_true
 
-    ability = Ability.new(@guest)
+    ability = Ability.new(@admin)
     ability.can?(edit, @other_users_post).should be_true
 
 After
